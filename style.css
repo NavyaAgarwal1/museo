@@ -22,7 +22,7 @@
 
 body {
     font-family: 'Georgia', serif;
-    color: var(--primary-text-color);
+    color: #714848;
     background-color: var(--light-background);
     line-height: 1.6;
     overflow-x: hidden;
@@ -614,3 +614,187 @@ p { font-size: 1.1rem; }
         max-height: 700px;
     }
 }
+/* ================================================= */
+/* 1. Cinematic Hero Section (Lobby) - UPDATED BUTTON */
+/* ================================================= */
+
+/* ... (cinematic-hero, cinematic-backdrop, hero-content styles remain the same) ... */
+
+.tour-button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    /* Add smooth transitions for all changes */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth, dynamic curve */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.tour-button:hover {
+    /* Dynamic Hover Effect 1: Invert colors and create a subtle glow */
+    background-color: white;
+    color: var(--dark-hero-bg); 
+    
+    /* Subtle box-shadow for a glowing or elevated look */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 
+                0 0 5px rgba(255, 255, 255, 0.5);
+    
+    /* Slight movement and scaling */
+    transform: scale(1.05) translateY(-2px);
+    letter-spacing: 3px; /* Increases kinetic energy */
+}
+
+/* Optional: Add active/pressed state for immediate feedback */
+.tour-button:active {
+    transform: scale(0.98);
+    box-shadow: none;
+    background-color: var(--beige-header-bg);
+}
+/* ================================================= */
+/* 1. Cinematic Hero Section (Lobby) - UPDATED H1 */
+/* ================================================= */
+
+/* Existing H1 style */
+.hero-content h1 {
+    font-size: 5rem;
+    color: white;
+    margin-top: 50px;
+    
+    /* Add transition for smooth dynamic effects */
+    transition: all 0.5s ease-in-out; 
+    letter-spacing: 4px; /* Default spacing */
+    
+    /* Initial subtle glow for cinematic look */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
+}
+
+/* Dynamic Hover Effect for H1 */
+.hero-content h1:hover {
+    /* Increase text shadow for a noticeable glow */
+    text-shadow: 0 0 10px white, 
+                 0 0 20px rgba(255, 255, 255, 0.8), 
+                 0 0 30px rgba(255, 255, 255, 0.6);
+                 
+    /* Add a slight scale or skew for subtle movement */
+    transform: scale(1.02);
+    
+    /* Slightly increase letter spacing for visual expansion */
+    letter-spacing: 6px; 
+}
+
+/* ... (Rest of the Hero Content styles remain the same) ... */
+
+/* ... (tour-button styles remain the same) ... */
+/* ================================================= */
+/* 2. Gallery Walkthrough (Dark Background, Light Text, Navigation) - UPDATED H2 */
+/* ================================================= */
+
+/* Ensure the main H2 title ("Featured Collections") is white and prominent */
+#gallery-walkthrough h2 {
+    color: var(--stylish-light-text); 
+    font-family: 'Times New Roman', serif;
+    font-weight: 300; 
+    font-size: 2.5rem; 
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    
+    /* Add transition for smooth dynamic effects */
+    transition: all 0.4s ease-out; 
+    
+    /* Subtle initial text shadow */
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+/* Dynamic Hover Effect for H2 */
+#gallery-walkthrough h2:hover {
+    /* Increase text shadow for a noticeable glow */
+    text-shadow: 0 0 8px var(--stylish-light-text), 
+                 0 0 15px rgba(255, 255, 255, 0.6);
+                 
+    /* Add a slight scale for subtle movement */
+    transform: scale(1.03);
+    
+    /* Slightly increase letter spacing */
+    letter-spacing: 5px; 
+    cursor: default; /* Change cursor to indicate text is not clickable */
+}
+
+/* ... (Rest of the Gallery Walkthrough styles remain the same) ... */
+/* --- Top Header (Minimalist & Clean) --- */
+#top-header {
+    width: 100%;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--beige-header-bg); 
+    box-shadow: var(--shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.header-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    border: 2px solid #8b5858;
+    padding: 5px 8px;
+}
+
+/* 1. Navigation Links Dynamic Effects */
+.header-nav a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    margin-left: 30px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    /* Add transition for hover effects */
+    transition: color 0.3s ease, transform 0.3s ease, letter-spacing 0.3s ease; 
+    letter-spacing: 1px;
+}
+
+.header-nav a:hover {
+    color: var(--accent-color); /* Darkest black on hover */
+    /* Subtle lift and spacing change */
+    transform: translateY(-2px); 
+    letter-spacing: 2.5px; 
+    /* Add a clean, defined bottom border or shadow effect */
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* 2. "Get in touch" Button Dynamic Effects */
+.cta-button {
+    background-color: #6e4646;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+    /* Updated transition for movement and shadow */
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: #333; /* Slightly lighter dark gray */
+    /* Add a pronounced shadow for a lifted 3D effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 
+                0 0 15px rgba(0, 0, 0, 0.1); 
+    transform: translateY(-2px); /* Slight vertical lift */
+    letter-spacing: 2px;
+}
+
+.cta-button:active {
+    background-color: var(--primary-text-color);
+    transform: translateY(0); /* Press down effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ... (Rest of the CSS file remains the same) ... */

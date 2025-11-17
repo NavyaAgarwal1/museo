@@ -56,7 +56,7 @@ function renderArtworkCards(category) {
                 <h4>${art.title}</h4>
                 <p>Artist: ${art.artist}</p>
                 <p>Year: ${art.year} | Medium: ${art.medium}</p>
-                <p class="click-prompt">(Click for Curator Notes & Full View)</p>
+                <p class="click-prompt">(Click for Full View)</p>
             </div>
         `;
         
