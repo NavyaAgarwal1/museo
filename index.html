@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuseoSpace — Virtual Art Exhibition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="top-header">
+        <div class="header-logo">MS</div>
+        <nav class="header-nav">
+            <a href="#gallery-walkthrough">Exhibitions</a>
+            <a href="#visitor-reflection">Contact</a>
+        </nav>
+        <button class="cta-button top-cta">Get in touch</button>
+    </header>
+
+    <main class="content-wrapper">
+
+        <section id="lobby" class="page-section cinematic-hero">
+            <div class="cinematic-backdrop">
+                </div>
+            <div class="hero-content">
+                <h1>MuseoSpace</h1>
+                <p class="subtitle">A Virtual Art Gallery</p>
+                <p class="subtitle2">designed to offer visitors an immersive, curated experience of various art collections</p>
+                <button id="start-tour-btn" class="tour-button">START THE TOUR →</button>
+            </div>
+        </section>
+
+        <section id="gallery-walkthrough" class="page-section light-section">
+            <h2>Featured Collections</h2>
+
+            <div class="category-navigation">
+                <button id="prev-category" class="nav-button">←</button>
+                <h3 id="category-title">Renaissance</h3>
+                <button id="next-category" class="nav-button">→</button>
+            </div>
+
+            <div id="gallery-container" class="art-gallery-grid content-visible">
+                </div>
+        </section>
+
+        <section id="visitor-reflection" class="page-section light-section reflection-section">
+            <h2>Visitor Reflection</h2>
+            <p>Share your thoughts and rate your favorite art pieces.</p>
+            <form id="feedback-form">
+                <input type="text" id="visitor-name" placeholder="Your Name" required>
+                <input type="email" id="visitor-email" placeholder="Your Email" required>
+                <select id="favorite-art">
+                    <option value="" disabled selected>Select a favorite masterpiece</option>
+                </select>
+                <textarea id="visitor-comment" placeholder="Your Curator Notes..."></textarea>
+                <button type="submit" class="cta-button">Submit Feedback</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <div id="artwork-focus-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modal-art-image" src="" alt="Artwork Image">
+                </div>
+                <div class="modal-details-panel">
+                    <h3 id="modal-art-title"></h3>
+                    <p class="artist-detail"><strong>Artist:</strong> <span id="modal-art-artist"></span></p>
+                    <p class="detail-line"><strong>Year:</strong> <span id="modal-art-year"></span></p>
+                    <p class="detail-line"><strong>Medium:</strong> <span id="modal-art-medium"></span></p>
+                    <hr>
+                    <div class="curator-notes-header">Curator Notes</div>
+                    <div class="curator-notes">
+                        <p id="modal-art-notes"></p>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+
+    <div id="thank-you-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Thank You for Your Reflection!</h3>
+            <div id="reflection-summary"></div>
+            <div class="modal-actions">
+                <button class="cta-button" onclick="location.reload()">Restart Tour</button>
+                <button class="cta-button share-btn" onclick="closeThankYouModal()">Share on Social Media</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
